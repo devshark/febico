@@ -8,14 +8,12 @@
 		$(document).ready(function () {	
 			$('ul#nav>li').hover(
 				function () {
-					console.log($('ul', this).html());
 					$('ul', this).slideDown(150);
 				}, 
 				function () {
 					$('ul', this).slideUp(150);
-					console.log($('ul', this).html());
 				}
 			);
 		});
-	</script>
-</head>
+		</script>
+	</head>
