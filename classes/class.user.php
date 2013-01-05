@@ -20,7 +20,4 @@ class User
 			return null;
 		}
 	}
-	
 }
-
-?>
