@@ -4,11 +4,14 @@
 		background-color:#302226;
 		font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
 	}
+	div#body{
+		padding-bottom:60px;
+		height:100%;
+		min-height:100%;
+		position:relative;
+	}
 	div#login input[type=submit].ui-button, div#login a#login.ui-button{
-		font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
 		font-size: 75%;
-		padding-top:1px;
-		padding-bottom:1px;
 	}
 	ul#nav {
 		width: 1200px;
@@ -67,3 +70,33 @@
 	span.white{
 		color:white;
 	}
+	div#contents{
+		width:95%;
+		margin:auto;
+		padding-top:50px;
+	}
+	textarea.tinymce{
+		width:100%;
+	}
+	div#contents article .title{
+		color:white;
+		font-size:1.5em;
+	}
+	div#contents article .meta .author{
+		color:green;
+	}
+	div#contents article .meta{
+		color:blue;
+		font-size:80%;
+	}
+	div#contents article div.text{
+		padding-left:30px;
+	}
+	footer{
+		text-align:center;
+		position:absolute;
+		bottom:0;
+		width:1150px;
+		height:60px;   /* Height of the footer */
+	}
+	

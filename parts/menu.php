@@ -1,6 +1,6 @@
 		<ul id="nav">
-			<li><a href="#">Home</a></li>
-			<li><a href="#" class="selected">Events</a></li>
+			<li><a href="index.php">Home</a></li>
+			<li><a href="events.php">Events</a></li>
 			<li><a href="#">Membership</a>
 				<ul>
 					<li><a href="#">Membership Procedure</a></li>

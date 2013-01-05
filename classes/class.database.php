@@ -242,6 +242,11 @@
 					$sql = "select * from {$this->escape($tablename)} $where_clause";
 					return $this->query($sql);
 				}
+				
+				function order_by($order = 'asc')
+				{
+					// pass
+				}
 
 				function __tostring()
 				{

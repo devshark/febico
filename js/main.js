@@ -10,8 +10,8 @@
 			);
 			$('a.ui-button').button();
 			$('input[type=submit]')
-			.button()
-			.click(function(event){
+			.button();
+			$('div#login input[type=submit]').click(function(event){
 				event.preventDefault();
 				var $form = $(this).parent('form');
 				$.post(
@@ -22,11 +22,67 @@
 						if(data.status == 'success'){
 							window.location.href='index.php';
 						}else{
+							$('<div></div>')
+							.text(data.message)
+							.dialog(
+								{
+									title:'Login Failure',
+									modal:true,
+									resizable:false,
+									closeOnEscape:true,
+									buttons: {
+										"Ok":function(){
+											$(this).dialog('destroy');
+											$form.find('input[name=user_id]').focus();
+										}
+									}
+								}
+							)
+							.css({'font-size':'75%'});
 							$form.find('input[name=user_id]').focus();
-							alert('Login Failure.');
 						}
 					},
 					'json'
 				)
+			});
+			$('textarea.tinymce')
+			.parent('form')
+			.find('input[type=submit]')
+			.click(function(event){
+				event.preventDefault();
+				var $form = $(this).parents('form');
+				// console.log($(this).parents('form'));
+				$.post(
+					$form.attr('action'),
+					// 'events.save.php',
+					$form.serialize(),
+					function(data){
+						if(data.status=='success')
+						{
+							window.location.href='events.php';
+						}
+						else
+						{
+							$('<div></div>')
+							.text(data.message)
+							.dialog(
+								{
+									title:'Login Failure',
+									modal:true,
+									resizable:false,
+									closeOnEscape:true,
+									buttons: {
+										"Ok":function(){
+											$(this).dialog('destroy');
+										}
+									}
+								}
+							)
+							.css({'font-size':'75%'});
+						}
+						// console.log(data);
+					},
+					'json'
+				);
 			});
 		});

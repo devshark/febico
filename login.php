@@ -14,7 +14,7 @@ if(count($_POST) > 1)
 		$user = (new User())->get_user($_POST['user_id']);
 		if($user != null)
 		{
-			print_r($user->password);
+			// print_r($user->password);
 			if($user->password == sha1($_POST['user_pw']))
 			{
 				$_SESSION['user']['username'] = $user->username;

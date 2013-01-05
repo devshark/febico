@@ -4,6 +4,7 @@
 	<body>
 	<?php require_once('parts/login.php'); ?>
 	<?php require_once('parts/banner.php'); ?>
-<?php require_once('parts/menu.php'); ?>
+	<?php require_once('parts/menu.php'); ?>
+	<?php require_once('parts/footer.php'); ?>
 	</body>
-<html>
+</html>
