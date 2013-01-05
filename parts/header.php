@@ -6,12 +6,14 @@
 		<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
 		<script type="text/javascript">
 		$(document).ready(function () {	
-			$('ul#nav li').hover(
+			$('ul#nav>li').hover(
 				function () {
-					$('ul', this).stop().slideDown(150);
+					console.log($('ul', this).html());
+					$('ul', this).slideDown(150);
 				}, 
 				function () {
-					$('ul', this).stop().slideUp(150);
+					$('ul', this).slideUp(150);
+					console.log($('ul', this).html());
 				}
 			);
 		});
